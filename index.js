@@ -18,10 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
-app.use("/", () => {});
+app.use("/", Routes);
 
 // Port
-const PORT = 5000;
+const PORT = 8000;
 
 // Connecting to Database
 const username = process.env.DB_USERNAME;
