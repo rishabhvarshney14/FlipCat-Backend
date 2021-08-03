@@ -2,7 +2,10 @@ import express from "express";
 
 // Methods
 import { userSignup, userLogIn } from "../controller/user-controller.js";
-import { getProducts } from "../controller/product-controller.js";
+import {
+  getProducts,
+  getProductById,
+} from "../controller/product-controller.js";
 
 const router = express.Router();
 
@@ -14,5 +17,8 @@ router.post("/login", userLogIn);
 
 // Products Route
 router.get("/products", getProducts);
+
+// Product by Id Route
+router.get("/products/:id", getProductById);
 
 export default router;
