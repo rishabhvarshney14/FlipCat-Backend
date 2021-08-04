@@ -5,7 +5,6 @@ import cors from "cors";
 
 // Components
 import Connection from "./database/db.js";
-import DefaultData from "./default.js";
 import Routes from "./routes/routes.js";
 
 dotenv.config();
@@ -29,6 +28,3 @@ const password = process.env.DB_PASSWORD;
 Connection(username, password);
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-
-// Default Data to Database
-DefaultData();
