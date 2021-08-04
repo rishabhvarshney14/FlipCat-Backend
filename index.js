@@ -20,7 +20,7 @@ app.use(cors());
 app.use("/", Routes);
 
 // Port
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Connecting to Database
 const username = process.env.DB_USERNAME;
